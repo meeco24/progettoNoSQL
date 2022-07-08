@@ -1,0 +1,75 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Sat Jul 2 11:06:39 2022
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   /home/oracle/Documents/progettoDatabaseNoSQL/files/controlAziende.ctl
+
+There are 2 data files:
+Data File:      /home/oracle/Documents/progettoDatabaseNoSQL/files/aziende25000.csv
+  Bad File:     /home/oracle/Documents/progettoDatabaseNoSQL/files/aziende25000.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+Data File:      /home/oracle/Documents/progettoDatabaseNoSQL/files/aziende-25000.csv
+  Bad File:     (null)
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table AZIENDE, loaded from every logical record.
+Insert option in effect for this table: INSERT
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ,  O(") CHARACTER            
+NOME                                 NEXT     *   ,  O(") CHARACTER            
+DATA_FONDAZIONE                      NEXT     *   ,  O(") CHARACTER            
+QUOTAZIONI                           NEXT   300   ,  O(") CHARACTER            
+  (FILLER FIELD)
+SEDE_LEGALE                          NEXT     *   ,  O(") CHARACTER            
+
+
+Data File /home/oracle/Documents/progettoDatabaseNoSQL/files/aziende25000.csv -
+
+Record 1: Rejected - Error on table AZIENDE, column ID.
+ORA-01722: invalid number
+
+Record 16001: Rejected - Error on table AZIENDE, column QUOTAZIONI.
+Field in data file exceeds maximum length
+
+Data File /home/oracle/Documents/progettoDatabaseNoSQL/files/aziende-25000.csv -
+
+Record 17502: Rejected - Error on table AZIENDE, column ID.
+ORA-01722: invalid number
+
+
+Table AZIENDE:
+  24999 Rows successfully loaded.
+  3 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 258000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:         25002
+Total logical records rejected:         3
+Total logical records discarded:        0
+
+Run began on Sat Jul 02 11:06:39 2022
+Run ended on Sat Jul 02 11:06:40 2022
+
+Elapsed time was:     00:00:01.03
+CPU time was:         00:00:00.11

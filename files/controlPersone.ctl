@@ -1,0 +1,10 @@
+LOAD DATA
+INSERT INTO TABLE persone
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+TRAILING NULLCOLS
+(
+id,
+nome,
+data_nascita,
+nazionalita
+)
